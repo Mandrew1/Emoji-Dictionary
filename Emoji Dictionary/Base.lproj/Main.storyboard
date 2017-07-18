@@ -63,8 +63,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="This is a church" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yM-LN-AkJ">
-                                <rect key="frame" x="54" y="349" width="268" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is a church" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yM-LN-AkJ">
+                                <rect key="frame" x="53" y="349" width="268" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a church" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSZ-Uj-v7r">
+                                <rect key="frame" x="54" y="413" width="268" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a church" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKe-Ev-CpR">
+                                <rect key="frame" x="54" y="475" width="268" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,17 +84,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wSZ-Uj-v7r" secondAttribute="trailing" constant="37" id="0uq-vX-Fbi"/>
+                            <constraint firstItem="rKe-Ev-CpR" firstAttribute="top" secondItem="wSZ-Uj-v7r" secondAttribute="bottom" constant="41.5" id="5Ku-8b-qdc"/>
+                            <constraint firstItem="rKe-Ev-CpR" firstAttribute="leading" secondItem="ACY-qe-XjL" secondAttribute="leadingMargin" constant="38" id="5OJ-nE-91x"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1yM-LN-AkJ" secondAttribute="trailing" constant="38" id="6tY-Hm-b0G"/>
                             <constraint firstItem="TJE-5O-gjl" firstAttribute="top" secondItem="UPL-98-BCi" secondAttribute="bottom" constant="40" id="IhN-Nd-7G4"/>
                             <constraint firstItem="1yM-LN-AkJ" firstAttribute="leading" secondItem="ACY-qe-XjL" secondAttribute="leadingMargin" constant="37" id="Jm0-Hn-bzU"/>
+                            <constraint firstItem="wSZ-Uj-v7r" firstAttribute="top" secondItem="1yM-LN-AkJ" secondAttribute="bottom" constant="43.5" id="Lbv-ap-7NP"/>
+                            <constraint firstItem="uek-Em-bWX" firstAttribute="top" secondItem="rKe-Ev-CpR" secondAttribute="bottom" constant="171.5" id="Po1-Ny-ZeZ"/>
                             <constraint firstItem="TJE-5O-gjl" firstAttribute="leading" secondItem="ACY-qe-XjL" secondAttribute="leadingMargin" constant="33" id="b2w-CS-xQe"/>
                             <constraint firstItem="uek-Em-bWX" firstAttribute="top" secondItem="1yM-LN-AkJ" secondAttribute="bottom" constant="297.5" id="dxT-I0-sxU"/>
+                            <constraint firstItem="wSZ-Uj-v7r" firstAttribute="leading" secondItem="ACY-qe-XjL" secondAttribute="leadingMargin" constant="38" id="hp6-N3-bAS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rKe-Ev-CpR" secondAttribute="trailing" constant="37" id="pfq-pf-8pZ"/>
+                            <constraint firstItem="rKe-Ev-CpR" firstAttribute="top" secondItem="wSZ-Uj-v7r" secondAttribute="bottom" constant="41.5" id="sVT-Qn-3mD"/>
                             <constraint firstItem="TJE-5O-gjl" firstAttribute="top" secondItem="UPL-98-BCi" secondAttribute="bottom" constant="40" id="wGw-Oq-0rv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TJE-5O-gjl" secondAttribute="trailing" constant="33" id="wKM-c6-7AY"/>
                             <constraint firstItem="1yM-LN-AkJ" firstAttribute="top" secondItem="TJE-5O-gjl" secondAttribute="bottom" constant="50" id="zEl-fv-CSC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthYearLabel" destination="rKe-Ev-CpR" id="Bia-Qi-v22"/>
+                        <outlet property="categoryLabel" destination="wSZ-Uj-v7r" id="9rN-Om-fTO"/>
                         <outlet property="defLabel" destination="1yM-LN-AkJ" id="heH-z2-xvo"/>
                         <outlet property="emojiLabel" destination="TJE-5O-gjl" id="fiT-Ef-67o"/>
                     </connections>
