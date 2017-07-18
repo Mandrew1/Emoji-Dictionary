@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UsJ-ln-6CW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="juT-UP-SM9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfa-bv-zGq">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -35,17 +35,20 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hfa-bv-zGq" secondAttribute="bottom" id="ho7-rB-iuO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dTs-Hx-QIB"/>
                     <connections>
                         <outlet property="tView" destination="hfa-bv-zGq" id="Chx-l2-xsg"/>
+                        <segue destination="UsJ-ln-6CW" kind="show" identifier="moveSegway" id="ral-M4-PRw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="ZiD-uo-P0b">
             <objects>
-                <viewController id="UsJ-ln-6CW" sceneMemberID="viewController">
+                <viewController id="UsJ-ln-6CW" customClass="DefinitionViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UPL-98-BCi"/>
                         <viewControllerLayoutGuide type="bottom" id="uek-Em-bWX"/>
@@ -61,7 +64,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="This is a church" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yM-LN-AkJ">
-                                <rect key="frame" x="53" y="337" width="268" height="116"/>
+                                <rect key="frame" x="54" y="349" width="268" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,15 +72,42 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1yM-LN-AkJ" secondAttribute="trailing" constant="38" id="6tY-Hm-b0G"/>
                             <constraint firstItem="TJE-5O-gjl" firstAttribute="top" secondItem="UPL-98-BCi" secondAttribute="bottom" constant="40" id="IhN-Nd-7G4"/>
-                            <constraint firstItem="1yM-LN-AkJ" firstAttribute="top" secondItem="TJE-5O-gjl" secondAttribute="bottom" constant="144" id="cKo-UZ-MIR"/>
+                            <constraint firstItem="1yM-LN-AkJ" firstAttribute="leading" secondItem="ACY-qe-XjL" secondAttribute="leadingMargin" constant="37" id="Jm0-Hn-bzU"/>
+                            <constraint firstItem="TJE-5O-gjl" firstAttribute="leading" secondItem="ACY-qe-XjL" secondAttribute="leadingMargin" constant="33" id="b2w-CS-xQe"/>
+                            <constraint firstItem="uek-Em-bWX" firstAttribute="top" secondItem="1yM-LN-AkJ" secondAttribute="bottom" constant="297.5" id="dxT-I0-sxU"/>
+                            <constraint firstItem="TJE-5O-gjl" firstAttribute="top" secondItem="UPL-98-BCi" secondAttribute="bottom" constant="40" id="wGw-Oq-0rv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TJE-5O-gjl" secondAttribute="trailing" constant="33" id="wKM-c6-7AY"/>
                             <constraint firstItem="1yM-LN-AkJ" firstAttribute="top" secondItem="TJE-5O-gjl" secondAttribute="bottom" constant="50" id="zEl-fv-CSC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="defLabel" destination="1yM-LN-AkJ" id="heH-z2-xvo"/>
+                        <outlet property="emojiLabel" destination="TJE-5O-gjl" id="fiT-Ef-67o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ypq-cS-ctx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="37"/>
+            <point key="canvasLocation" x="1788" y="36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Klf-ti-yum">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="juT-UP-SM9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H0R-EC-tyw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B2H-4a-K00"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Utj-9C-5l7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="-646.32683658170924"/>
         </scene>
     </scenes>
 </document>
